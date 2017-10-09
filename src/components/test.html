@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <input type="text" name="" class="rt" value="">
+        <button type="button" name="button" onclick="aa()">button</button>
+        <script>
+        var a = document.querySelector('.rt')
+        function aa () {
+
+            console.log(a.value)
+        }
+        // a.addEventListener('onmousedown',function(e){
+        //     console.log(e)
+        // })
+        window.onload = function(){
+                document.querySelector('.rt').onkeydown = function(e){
+                var keyCode;
+                console.log(e,'000')
+                window.event ? keyCode = e.keyCode :keyCode = e.which;
+                var keyStr = String.fromCharCode(keyCode);
+                return /\d/.test(keyStr);
+                }
+        }
+
+        </script>
+    </body>
+</html>
